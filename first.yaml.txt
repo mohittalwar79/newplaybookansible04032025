@@ -1,0 +1,11 @@
+---
+ - name: New playbook
+   hosts: all
+   become: true
+   gather_fact: yes
+       tasks:
+        - name: copy file  
+          copy:   
+           - src: /etc/rsyslog.conf
+             dest: /tmp/
+          
