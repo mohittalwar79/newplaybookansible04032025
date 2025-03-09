@@ -15,7 +15,7 @@
          home: /home/mohittalwar4567
          shell: /bin/false
          comment: new false user
-        become: yes  
+         state: present  
      - name: ping check
        ping: 
      - name: debug response
