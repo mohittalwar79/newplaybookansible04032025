@@ -13,7 +13,7 @@
            name: mohit199923
            home: /home/mohittalwar
            shell: /bin/bash
-           commit: new user
+           comment: new user
      - name: ping check
        ping: 
             name: ping response
