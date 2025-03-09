@@ -8,12 +8,14 @@
        copy:   
            src: /home/jenkins/ansible.sh
            dest: /tmp
+        become: true   
      - name : user create new
        user:
          name: mohit24
          home: /home/mohittalwar45
          shell: /bin/false
          comment: new false user
+        become: yes  
      - name: ping check
        ping: 
      - name: debug response
