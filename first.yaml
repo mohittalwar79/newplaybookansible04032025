@@ -11,8 +11,8 @@
         become: true   
      - name : user create new
        user:
-         name: mohit24
-         home: /home/mohittalwar45
+         name: mohit2467
+         home: /home/mohittalwar4567
          shell: /bin/false
          comment: new false user
         become: yes  
