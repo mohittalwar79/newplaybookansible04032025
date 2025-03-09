@@ -3,19 +3,19 @@
    hosts: all
    become: true
    gather_fact: yes
-       tasks:
-        - name: copy file  
-          copy:   
-           - src: /etc/rsyslog.conf
-             dest: /tmp/
-         - name : user create
-             user:
-              - name: mohit199923
-                home: /home/mohittalwar
-                shell: /bin/bash
-                commit: new user
-          - name: ping check
-              ping: 
-                 - name: ping response
-                   debug: "error msg"
+   tasks:
+     - name: copy file  
+       copy:   
+         - src: /etc/rsyslog.conf
+           dest: /tmp/
+      - name : user create
+        user:
+          - name: mohit199923
+            home: /home/mohittalwar
+            shell: /bin/bash
+            commit: new user
+       - name: ping check
+         ping: 
+           - name: ping response
+             debug: "error msg"
                 
