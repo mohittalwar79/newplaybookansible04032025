@@ -1,21 +1,21 @@
 ---
  - name: Newplaybook
-   hosts: all
+   hosts: jenkins
    become: true
    gather_facts: yes
    tasks:
      - name: copy file  
        copy:   
-           src: /etc/rsyslog.conf
-           dest: /home/jenkins/
+           src: /home/jenkins/ansible.sh
+i          dest: /tmp
      - name : user create new
        user:
-           name: mohit19992344
-           home: /home/mohittalwar44
+           name: mohit199922345
+           home: /home/mohittalwar44235
            shell: /bin/bash
            comment: new user
      - name: ping check
        ping: 
      - name: debug response
        debug: 
-         msg: "error 2 msg"
+         msg: "error 45 msg"
