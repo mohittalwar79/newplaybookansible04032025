@@ -7,7 +7,7 @@
      - name: copy file  
        copy:   
            src: /home/jenkins/ansible.sh
-i          dest: /tmp
+           dest: /tmp
      - name : user create new
        user:
            name: mohit199922345
