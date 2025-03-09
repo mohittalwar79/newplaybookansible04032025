@@ -1,8 +1,8 @@
 ---
- - name: New playbook
+ - name: Newplaybook
    hosts: all
    become: true
-   gather_fact: yes
+   gather_facts: yes
    tasks:
      - name: copy file  
        copy:   
