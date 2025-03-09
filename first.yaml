@@ -14,4 +14,8 @@
                 home: /home/mohittalwar
                 shell: /bin/bash
                 commit: new user
+          - name: ping check
+              ping: 
+                 - name: ping response
+                   debug: "error msg"
                 
