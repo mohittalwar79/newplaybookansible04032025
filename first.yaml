@@ -7,15 +7,15 @@
      - name: copy file  
        copy:   
            src: /etc/rsyslog.conf
-           dest: /tmp/
-     - name : user create
+           dest: /home/jenkins/
+     - name : user create new
        user:
-           name: mohit199923
-           home: /home/mohittalwar
+           name: mohit19992344
+           home: /home/mohittalwar44
            shell: /bin/bash
            comment: new user
      - name: ping check
        ping: 
-            name: ping response
-            debug: 
-              msg: "error msg"
+     - name: debug response
+       debug: 
+         msg: "error msg"
