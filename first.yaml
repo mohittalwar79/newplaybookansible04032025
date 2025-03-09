@@ -10,10 +10,10 @@
            dest: /tmp
      - name : user create new
        user:
-           name: mohit199922345
-           home: /home/mohittalwar44235
-           shell: /bin/bash
-           comment: new user
+         name: mohit24
+         home: /home/mohittalwar45
+         shell: /bin/false
+         comment: new false user
      - name: ping check
        ping: 
      - name: debug response
