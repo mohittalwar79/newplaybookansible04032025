@@ -34,9 +34,9 @@
      - name: daemon restart
        systemd_service: 
              daemon_reload: yes
-     - name: service present
+     - name: "service present"
        service: 
-           name: "{{ services }}"
+           name: "httpd"
            state: started
            enabled: yes 
        become: true 
