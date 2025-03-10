@@ -33,7 +33,7 @@
           state: latest 
        notify: 
          - service present 
-      - name: daemon restart
+     - name: daemon restart
           service: 
              daemon_reload: yes
    handlers: 
