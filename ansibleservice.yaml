@@ -27,7 +27,7 @@
      - name: service install 
        yum:
           name: httpd
-          state: present
+          state: latest
        notify: 
          - service present 
     
