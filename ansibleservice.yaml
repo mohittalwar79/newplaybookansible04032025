@@ -34,7 +34,7 @@
        notify: 
          - service present 
      - name: daemon restart
-          service: 
+       systemd_service: 
              daemon_reload: yes
    handlers: 
       - name: service present
