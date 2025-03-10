@@ -39,6 +39,6 @@
    handlers: 
       - name: service present
         service: 
-           name: "{{ services }}"
+           name: httpd
            state: started
            enabled: yes 
