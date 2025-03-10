@@ -14,7 +14,10 @@
          home: /home/mohittalwar4567
          shell: /bin/false
          comment: new false user
-         state: present  
+         state: present
+     - name: debug users
+       debug:
+          var: ansible_facts['mohit2467']
      - name: ping check
        ping: 
      - name: debug response
