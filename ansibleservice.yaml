@@ -30,14 +30,15 @@
      - name: service install 
        yum:
           name: "{{ services }}"
-          state: latest
-          daemon_reload: yes
-          enabled: yes 
+          state: latest 
        notify: 
          - service present 
-    
+      - name: daemon restart
+          service: 
+             daemon_reload: yes
    handlers: 
       - name: service present
         service: 
            name: "{{ services }}"
            state: started
+           enabled: yes 
