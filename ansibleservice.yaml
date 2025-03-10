@@ -1,6 +1,6 @@
 ---
- - name: Newplaybook
-   hosts: jenkins
+ - name: playbook2
+   hosts: ansible
    become: true
    gather_facts: yes
    tasks:
