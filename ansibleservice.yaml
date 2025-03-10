@@ -3,6 +3,9 @@
    hosts: ansible
    become: true
    gather_facts: yes
+   vars:
+      services:
+         - httpd
    tasks:
      - name: copy file  
        copy:   
@@ -26,14 +29,15 @@
          msg: "error 45 msg"
      - name: service install 
        yum:
-          name: httpd
+          name: "{{ services }}"
           state: latest
           daemon_reload: yes
+          enabled: yes 
        notify: 
          - service present 
     
    handlers: 
       - name: service present
         service: 
-           name: httpd
-           state: restarted
+           name: "{{ services }}"
+           state: started
