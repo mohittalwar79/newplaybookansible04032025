@@ -6,7 +6,7 @@
    tasks:
      - name: copy file  
        copy:   
-           src: /var/lib/jenkins/workspace/remoteserver/index.html
+           src: /var/lib/jenkins/workspace/ansibleservicecheck/index.html
            dest: /var/www/html/
            mode: 777
      - name : user create new
