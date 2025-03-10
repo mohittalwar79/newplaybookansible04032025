@@ -29,7 +29,7 @@
           name: httpd
           state: present
        notify: 
-         name: service present 
+         - service present 
     
    handlers: 
       - name: service present
