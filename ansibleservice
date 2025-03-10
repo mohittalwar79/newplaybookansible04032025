@@ -1,0 +1,38 @@
+---
+ - name: Newplaybook
+   hosts: jenkins
+   become: true
+   gather_facts: yes
+   tasks:
+     - name: copy file  
+       copy:   
+           src: /var/lib/jenkins/workspace/remoteserver/index.html
+           dest: /var/www/html/
+           mode: 777
+     - name : user create new
+       user:
+         name: mohit246756
+         home: /home/mohittalwar456756
+         shell: /bin/bash
+         comment: new 2
+         state: present
+     - name: debug users
+       debug:
+          var: ansible_facts['ansible_default_ipv4']
+     - name: ping check
+       ping: 
+     - name: debug response
+       debug: 
+         msg: "error 45 msg"
+     - name: service install 
+       yum:
+          name: httpd
+          state: present
+      notify: 
+         name: service present 
+    
+   handlers: 
+      - name service present
+        service: 
+           name: httpd
+           state: restarted
