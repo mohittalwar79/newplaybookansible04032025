@@ -28,7 +28,7 @@
        debug: 
          msg: "error 45 msg"
      - name: service install 
-       yum:
+       dnf:
           name: "{{ services }}"
           state: latest  
      - name: daemon restart
