@@ -17,7 +17,7 @@
          state: present
      - name: debug users
        debug:
-          var: ansible_facts['mohit2467']
+          var: ansible_facts['ansible_default_ipv4']
      - name: ping check
        ping: 
      - name: debug response
