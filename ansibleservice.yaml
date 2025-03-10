@@ -28,6 +28,7 @@
        yum:
           name: httpd
           state: latest
+          daemon_reload: yes
        notify: 
          - service present 
     
