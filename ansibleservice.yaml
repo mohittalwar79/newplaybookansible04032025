@@ -28,11 +28,11 @@
        yum:
           name: httpd
           state: present
-      notify: 
+       notify: 
          name: service present 
     
    handlers: 
-      - name service present
+      - name: service present
         service: 
            name: httpd
            state: restarted
