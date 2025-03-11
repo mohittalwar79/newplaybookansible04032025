@@ -37,9 +37,9 @@
    handlers:
       - name: service-restart
         ansible.builtin.service: 
-          name: "{{ item }}" 
+          name: "{{ item | spiltext | first }}" 
           state: restarted
-          with_item:
+          with_items:
             - httpd
             - nfs-server
 
