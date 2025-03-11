@@ -36,7 +36,6 @@
           - service-restart   
    handlers:
       - name: service-restart
-        service: 
-         name: "{{ services }}" 
-         state: restarted 
-         enabled: yes
+        ansible.builtin.service: 
+          name: "{{ services }}" 
+          state: restarted
