@@ -36,10 +36,9 @@
      - name: daemon restart
        systemd_service: 
              daemon_reload: yes
-    
    handlers:
       - name: service restart
         service:
            name: httpd
-           state: started
+           state: restarted
            enabled: yes
