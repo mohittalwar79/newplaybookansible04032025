@@ -37,7 +37,7 @@
    handlers:
       - name: service-restart
         ansible.builtin.service: 
-          name: "{{ item | spiltext | first }}" 
+          name: "{{ item | splitext | first }}" 
           state: restarted
           with_items:
             - httpd
