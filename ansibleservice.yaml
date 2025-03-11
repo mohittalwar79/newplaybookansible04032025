@@ -39,6 +39,6 @@
    handlers:
       - name: service restart
         service:
-           name: {{ "services" }}
+           name: "{{ services }}"
            state: started
            enabled: yes
