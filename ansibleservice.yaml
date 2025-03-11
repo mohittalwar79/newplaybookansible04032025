@@ -39,4 +39,9 @@
              daemon_reload: yes
    handlers:
       - name: service restart
-        service: name="{{ services }}" state=restarted enabled=yes
+        service: 
+         name: "{{ item }}" 
+         state: restarted 
+         enabled: yes
+         with_item:
+             - httpd
