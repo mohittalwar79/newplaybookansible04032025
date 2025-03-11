@@ -6,6 +6,7 @@
    vars:
       services:
          - httpd
+         - nfs-server
    tasks:
      - name: copy file  
        copy:   
@@ -39,6 +40,6 @@
    handlers:
       - name: service restart
         service:
-           name: httpd
+           name: "{{ services }}"
            state: restarted
            enabled: yes
