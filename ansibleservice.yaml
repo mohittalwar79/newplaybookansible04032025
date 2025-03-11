@@ -31,7 +31,8 @@
        dnf:
           name: "{{ services }}"
           state: latest
-       notify: service restart   
+       notify: 
+          - service restart   
      - name: daemon restart
        systemd_service: 
              daemon_reload: yes
