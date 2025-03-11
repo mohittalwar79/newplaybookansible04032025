@@ -30,8 +30,15 @@
      - name: service install 
        dnf:
           name: "{{ services }}"
-          state: latest  
+          state: latest
+       notify: service restart   
      - name: daemon restart
        systemd_service: 
              daemon_reload: yes
     
+  handlers:
+      - name: service restart
+        service:
+           name: {{ "services" }}
+           state: started
+           enabled: yes
