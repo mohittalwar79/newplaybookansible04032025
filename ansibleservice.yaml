@@ -6,7 +6,7 @@
    vars:
       services:
          - httpd
-         - nfs-server
+         - nfs-utils
    tasks:
      - name: copy file  
        copy:   
