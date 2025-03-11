@@ -37,5 +37,10 @@
    handlers:
       - name: service-restart
         ansible.builtin.service: 
-          name: "{{ services }}" 
+          name: "{{ item }}" 
           state: restarted
+        with_item:
+            - httpd
+            - nfs-server
+
+            
