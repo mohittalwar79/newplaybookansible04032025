@@ -33,15 +33,10 @@
           name: "{{ services }}"
           state: latest
        notify: 
-          - service restart   
-     - name: daemon restart
-       systemd_service: 
-             daemon_reload: yes
+          - service-restart   
    handlers:
-      - name: service restart
+      - name: service-restart
         service: 
-         name: "{{ item }}" 
+         name: "{{ services }}" 
          state: restarted 
          enabled: yes
-         with_item:
-             - httpd
