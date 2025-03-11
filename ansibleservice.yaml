@@ -39,7 +39,7 @@
         ansible.builtin.service: 
           name: "{{ item }}" 
           state: restarted
-        with_item:
+          with_item:
             - httpd
             - nfs-server
 
