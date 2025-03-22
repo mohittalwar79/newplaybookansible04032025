@@ -39,6 +39,7 @@
         ansible.builtin.service: 
           name: "{{ item | splitext | first }}" 
           state: restarted
+          enable: yes
         with_items:
             - httpd
             - nfs-server
