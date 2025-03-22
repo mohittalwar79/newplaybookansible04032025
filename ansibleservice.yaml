@@ -38,8 +38,8 @@
       - name: service-restart
         ansible.builtin.service: 
           name: "{{ item | splitext | first }}" 
-          state: restarted
-          enable: yes
+          state: started
+          enabled: yes
         with_items:
             - httpd
             - nfs-server
