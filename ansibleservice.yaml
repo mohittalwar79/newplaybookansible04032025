@@ -33,8 +33,9 @@
           name: "{{ services }}"
           state: latest
      - name: check service
-       service: "{{ services }}"
-       state: present
+       service: 
+         name: "{{ services }}"
+         state: present
        notify: 
           - service-restart   
    handlers:
