@@ -13,6 +13,8 @@
            src: /var/lib/jenkins/workspace/ansibleservicecheck/index.html
            dest: /var/www/html/
            mode: 777
+       notify: 
+          - service-restart    
      - name : user create new
        user:
          name: mohit246756
@@ -31,13 +33,7 @@
      - name: service install 
        dnf:
           name: "{{ services }}"
-          state: latest
-     - name: check service
-       service: 
-         name: "{{ services }}"
-         state: present
-       notify: 
-          - service-restart   
+          state: latest  
    handlers:
       - name: service-restart
         ansible.builtin.service: 
