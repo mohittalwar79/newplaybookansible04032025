@@ -12,7 +12,8 @@
        copy:   
            src: /var/lib/jenkins/workspace/ansibleservicecheck/index.html
            dest: /var/www/html/
-           mode: 777
+           mode: 0777
+           
        notify: 
           - service-restart    
      - name : user create new
