@@ -32,6 +32,9 @@
        dnf:
           name: "{{ services }}"
           state: latest
+     - name: check service
+       service: "{{ services }}"
+       state: present
        notify: 
           - service-restart   
    handlers:
